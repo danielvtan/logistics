@@ -23,7 +23,7 @@
           "name": "Logistics"
         },
         "triggers": [],
-        "lastUpdated": 1606801586386
+        "lastUpdated": 1606802716166
       },
       "aa5f56c3-aecb-44e4-9b9e-837dfc36a1f5": {
         "id": "aa5f56c3-aecb-44e4-9b9e-837dfc36a1f5",
@@ -34,12 +34,61 @@
         "children": [],
         "isRemovable": true,
         "filePath": "serverless.yaml",
-        "lastUpdated": 1606802161027
+        "lastUpdated": 1606802903954
+      },
+      "7c02eb03-0833-4753-b369-8b8b9319a3a9": {
+        "id": "7c02eb03-0833-4753-b369-8b8b9319a3a9",
+        "parent": null,
+        "name": "v1",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "dd936737-fd44-4b8f-956a-6034a9d77741"
+        ],
+        "isRemovable": true,
+        "filePath": "v1"
+      },
+      "dd936737-fd44-4b8f-956a-6034a9d77741": {
+        "id": "dd936737-fd44-4b8f-956a-6034a9d77741",
+        "parent": "7c02eb03-0833-4753-b369-8b8b9319a3a9",
+        "name": "authorizer",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "394d9416-7a47-45e5-9393-f082afb236f7"
+        ],
+        "isRemovable": true,
+        "filePath": "v1/authorizer"
+      },
+      "394d9416-7a47-45e5-9393-f082afb236f7": {
+        "id": "394d9416-7a47-45e5-9393-f082afb236f7",
+        "parent": "dd936737-fd44-4b8f-956a-6034a9d77741",
+        "name": "autorizer.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "v1/authorizer/autorizer.js",
+        "cursor": {
+          "lineNumber": 8,
+          "column": 1
+        },
+        "config": {
+          "runtime": "nodejs12.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "autorizer"
+        },
+        "triggers": [],
+        "lastUpdated": 1606802851042
       }
     },
     "openFiles": [
       "4d98cdaf-cc09-410f-af08-5a836b63669a",
-      "aa5f56c3-aecb-44e4-9b9e-837dfc36a1f5"
+      "aa5f56c3-aecb-44e4-9b9e-837dfc36a1f5",
+      "394d9416-7a47-45e5-9393-f082afb236f7"
     ],
     "currentFileId": "aa5f56c3-aecb-44e4-9b9e-837dfc36a1f5",
     "resources": {},

@@ -32,7 +32,7 @@ provider:
         - "dynamodb:Scan"
         - "dynamodb:Query"
       Resource:
-        - "arn:aws:dynamodb:ap-southeast-1:460645298524:table/logistics*"
+        - "arn:aws:dynamodb:ap-southeast-1:071958815836:table/logistics*"
     - Effect: "Allow"
       Action:
           - "S3:*"
@@ -42,10 +42,10 @@ provider:
       Action:
           - "ses:SendEmail"
       Resource:
-          - "arn:aws:ses:us-west-2:460645298524:identity/${self:custom.email}"
+          - "arn:aws:ses:us-west-2:071958815836:identity/${self:custom.email}"
 # you can define service wide environment variables here
   environment:
-    apiArn: { "Fn::Join" : ["", ["arn:aws:execute-api:ap-southeast-1:460645298524:", { "Ref": "ApiGatewayRestApi" }, "/*"]] }
+    apiArn: { "Fn::Join" : ["", ["arn:aws:execute-api:ap-southeast-1:071958815836:", { "Ref": "ApiGatewayRestApi" }, "/*"]] }
     stage: ${self:custom.stage}
     region: ${self:provider.region}
     # messagesTable: ${self:custom.tableNames.messagesTable}
@@ -69,10 +69,10 @@ custom:
 #    - exclude-me-dir/**
 
 functions:
-#   authorizer:
-#     handler: v1/authorizer/authorizer.handler
-#     type: "TOKEN"
-#     identitySource: method.request.header.Authorization
+  authorizer:
+    handler: v1/authorizer/authorizer.handler
+    type: "TOKEN"
+    identitySource: method.request.header.Authorization
 #   messages:
 #     handler: v1/messages/handler.handler
 #     events:
