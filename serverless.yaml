@@ -73,6 +73,14 @@ functions:
     handler: v1/authorizer/authorizer.handler
     type: "TOKEN"
     identitySource: method.request.header.Authorization
+  users:
+    handler: v1/users/users.handler
+    events:
+      - http:
+        path: v1/users
+        method: post
+        integration: lambda
+        cors: true
 #   messages:
 #     handler: v1/messages/handler.handler
 #     events:
@@ -181,14 +189,7 @@ functions:
   #           method: post
   #           integration: lambda
   #           cors: true
-  # users:
-  #   handler: v1/users/users.handler
-  #   events:
-  #       - http:
-  #           path: v1/users
-  #           method: post
-  #           integration: lambda
-  #           cors: true
+  
   # promocode:
   #   handler: v1/promocode/promocode.handler
   #   events:
