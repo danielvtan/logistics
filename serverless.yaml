@@ -50,13 +50,13 @@ provider:
     region: ${self:provider.region}
     # messagesTable: ${self:custom.tableNames.messagesTable}
     sessionsTable: ${self:custom.tableNames.sessionsTable}
-    mediaTable: ${self:custom.tableNames.mediaTable}
+    # mediaTable: ${self:custom.tableNames.mediaTable}
     email: ${self:custom.email}
 custom:
   tableNames:
-    messagesTable: "logistics-messages-${self:custom.stage}"
+    # messagesTable: "logistics-messages-${self:custom.stage}"
     sessionsTable: "logistics-sessions"
-    mediaTable: "logistics-media-${self:custom.stage}"
+    # mediaTable: "logistics-media-${self:custom.stage}"
   email: danielvtan@gmail.com
   stage: ${opt:stage, self:provider.stage}
 # you can add packaging information here
@@ -69,51 +69,51 @@ custom:
 #    - exclude-me-dir/**
 
 functions:
-  authorizer:
-    handler: v1/authorizer/authorizer.handler
-    type: "TOKEN"
-    identitySource: method.request.header.Authorization
-  messages:
-    handler: v1/messages/handler.handler
-    events:
-      - http:
-          path: v1/messages
-          method: post
-          integration: lambda
-          cors: true
-      - http:
-          path: v1/messages/{id}
-          method: put
-          integration: lambda
-          cors: true
-      - http:
-          path: v1/messages/{id}/status
-          method: put
-          integration: lambda
-          authorizer: authorizer
-          cors: true
-          request:
-              parameters:
-                  headers:
-                    Authorization: true          
-      - http:
-          path: v1/messages/{id}
-          method: get
-          integration: lambda
-          cors: true
-      - http:
-          path: v1/messages
-          method: get
-          integration: lambda
-          cors: true
-  replies:
-    handler: v1/replies/handler.handler
-    events:
-      - http:
-          path: v1/replies/{message_id}
-          method: post
-          integration: lambda
-          cors: true
+#   authorizer:
+#     handler: v1/authorizer/authorizer.handler
+#     type: "TOKEN"
+#     identitySource: method.request.header.Authorization
+#   messages:
+#     handler: v1/messages/handler.handler
+#     events:
+#       - http:
+#           path: v1/messages
+#           method: post
+#           integration: lambda
+#           cors: true
+#       - http:
+#           path: v1/messages/{id}
+#           method: put
+#           integration: lambda
+#           cors: true
+#       - http:
+#           path: v1/messages/{id}/status
+#           method: put
+#           integration: lambda
+#           authorizer: authorizer
+#           cors: true
+#           request:
+#               parameters:
+#                   headers:
+#                     Authorization: true          
+#       - http:
+#           path: v1/messages/{id}
+#           method: get
+#           integration: lambda
+#           cors: true
+#       - http:
+#           path: v1/messages
+#           method: get
+#           integration: lambda
+#           cors: true
+#   replies:
+#     handler: v1/replies/handler.handler
+#     events:
+#       - http:
+#           path: v1/replies/{message_id}
+#           method: post
+#           integration: lambda
+#           cors: true
   # orders:
   #   handler: v1/orders/orders.handler
   #   events:
