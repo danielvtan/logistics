@@ -1,0 +1,83 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "4d98cdaf-cc09-410f-af08-5a836b63669a": {
+        "id": "4d98cdaf-cc09-410f-af08-5a836b63669a",
+        "parent": null,
+        "name": "Logistics.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "Logistics.js",
+        "cursor": {
+          "lineNumber": 4,
+          "column": 3
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "Logistics"
+        },
+        "triggers": [],
+        "lastUpdated": 1606801586386
+      },
+      "aa5f56c3-aecb-44e4-9b9e-837dfc36a1f5": {
+        "id": "aa5f56c3-aecb-44e4-9b9e-837dfc36a1f5",
+        "parent": null,
+        "name": "serverless.yaml",
+        "type": "YAML_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "serverless.yaml",
+        "lastUpdated": 1606801601206
+      }
+    },
+    "openFiles": [
+      "4d98cdaf-cc09-410f-af08-5a836b63669a",
+      "aa5f56c3-aecb-44e4-9b9e-837dfc36a1f5"
+    ],
+    "currentFileId": "aa5f56c3-aecb-44e4-9b9e-837dfc36a1f5",
+    "resources": {},
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.4.4.1",
+    "projectName": "Logistics",
+    "projectDescription": "Logistics",
+    "projectVersion": "1.0.0",
+    "projectRegion": "ap-southeast-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {}
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "logistics",
+      "url": "https://github.com/danielvtan/logistics"
+    }
+  }
+}
