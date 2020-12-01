@@ -77,10 +77,10 @@ functions:
     handler: v1/users/users.handler
     events:
       - http:
-        path: v1/users
-        method: post
-        integration: lambda
-        cors: true
+          path: v1/users
+          method: post
+          integration: lambda
+          cors: true
 #   messages:
 #     handler: v1/messages/handler.handler
 #     events:
